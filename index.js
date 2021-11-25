@@ -1,4 +1,4 @@
-const { UrlUtils } = require("xdl");
+const { UrlUtils } = require('@expo/xdl');
 const cp = require("child_process");
 const fs = require("fs");
 const os = require("os");
@@ -49,7 +49,7 @@ const getAppHttpUrl = async () => {
 function resetEnvDyldVar(oldEnvVar) {
   if (oldEnvVar) {
     // revert the env var to the old value
-    process.env.SIMCTL_CHILD_DYLD_INSERT_LIBRARIES = oldVar;
+    process.env.SIMCTL_CHILD_DYLD_INSERT_LIBRARIES = oldEnvVar;
   } else {
     // old env var was never defined, so we delete it
     delete process.env.SIMCTL_CHILD_DYLD_INSERT_LIBRARIES;
