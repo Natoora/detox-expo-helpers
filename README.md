@@ -7,9 +7,9 @@ Utilities for using [detox](http://github.com/wix/detox) in your Expo/Create Rea
 ### Install it
 
 ```
-yarn add fschoenfeldt/detox-expo-helpers -D
+yarn add Natoora/detox-expo-helpers -D
  # or
-npm i fschoenfeldt/detox-expo-helpers --save-dev
+npm i Natoora/detox-expo-helpers --save-dev
 ```
 
 Also, declare `expo-detox-hooks` in your project's `package.json`.
@@ -22,9 +22,9 @@ Follow the steps in the detox [Getting Started](https://github.com/wix/detox/blo
 
 You can download the Expo app from the [Expo Tools page](https://expo.io/tools). See an [example package.json configuration](https://github.com/expo/with-detox-tests/blob/033020b165452d641f512a9b1a8a291632ce8e8f/package.json#L21-L29)
 
-### Use detox-expo-helpers in your app
+### Use detox-expo-helpers in expo app
 
-> ⚠️ Important: This fork disables `deviceSynchronization` because it was the only way we could figure out getting Detox@18 to work. When launching the App with `reloadApp`, you have to wait for the first element to ensure the app is properly booted. (See Example)
+> ⚠️ Important: This fork disables `deviceSynchronization` because it was the only way we could figure out getting Detox@18 to work. When launching the App with `reloadApp`, you have to wait for the first element to ensure the app is properly booted. (See Example). Also, we are bumping the `xdl` to v59.
 
 All you really need to use is `reloadApp`, like so:
 
@@ -58,9 +58,7 @@ describe(`Example Tests`, () => {
 }
 ```
 
-## Example app
+## Original Example app
 
-You can find the latest example app here, which is working with Expo@42 and Detox@18: https://github.com/fschoenfeldt/clean-expo-detox-testing
-
-Original Example App:
+Original Example App (May not work):
 Try out an example app with this already configured at https://github.com/expo/with-detox-tests
